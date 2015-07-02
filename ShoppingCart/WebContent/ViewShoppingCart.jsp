@@ -1,6 +1,7 @@
 <%@ page language="java" import="data.*,java.util.*,java.text.*" %>
 
 <%-- Show the header with the shopping cart image --%>
+<body><a href="/ShoppingCart/ShowProductCatalog.jsp">continue shopping</a></body>
 <table border="0">
 <tr><td><img src="cart4.png"><td><h1>Shopping Cart</h1>
 </table>
@@ -19,6 +20,7 @@
 // Get the items from the cart.
     Vector items = cart.getItems();
 
+
 // If there are no items, tell the user that the cart is empty.
     if (items.size() == 0)
     {
@@ -31,8 +33,8 @@
 <br>
 <table border=4>
 <tr><th>Description</th><th>Quantity</th><th>Price</th></tr>
-<%
 
+<% 
         int numItems = items.size();
 
 // Get a formatter to write out currency values.
@@ -52,8 +54,9 @@
 
 // Print out a link that allows the user to delete an item from the cart.
             out.println("</td><td>"+
-                "<a href=\"/shoppingcart/RemoveItemServlet?item="+
-                i+"\">Remove</a></td></tr>");
+                "<a href=\"/ShoppingCart/CheckoutServlet?cart="+
+                i+"\">Confirm</a></td></tr>");
+          
         }
     }
 %>

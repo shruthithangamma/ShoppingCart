@@ -82,7 +82,7 @@ public class CheckoutServlet extends HttpServlet {
 
 // Now display the cart and allow the user to check out or order more items.
             response.sendRedirect(response.encodeRedirectURL(
-                "/shoppingcart/ShowConfirmation.jsp"+
+                "/ShoppingCart/ShowConfirmation.jsp"+
                 "?confirmationNumber="+confirmation));
         }
         catch (ShoppingCartException exc)

@@ -5,12 +5,11 @@
 <%
 // Initialize the array of available products.
     Item[] catalog = new Item[] {
-        new Item("X-1", "Widgets", 2999999.95, 5),
+        new Item("X-1", "Widgets", 5, 1),
         new Item("GWU-123876345-27B/6",
-            "Gizmos", 12000.00, 3),
-        new Item("BCT-12", "DooHickeys", 3700.00, 3),
-        new Item("EZ-1", "Gadgets",
-            699.95, 4)};
+            "Gizmos", 3, 1),
+        new Item("BCT-12", "DooHickeys", 3, 1),
+        new Item("EZ-1", "Gadgets",4, 1)};
 
 %>
 

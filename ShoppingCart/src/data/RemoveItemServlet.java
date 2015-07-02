@@ -47,6 +47,7 @@ public class RemoveItemServlet extends HttpServlet {
 // If there is no shopping cart, create one.
         if (cart == null)
         {
+        	
             cart = new ShoppingCart();
 
             session.setAttribute("ShoppingCart", cart);
