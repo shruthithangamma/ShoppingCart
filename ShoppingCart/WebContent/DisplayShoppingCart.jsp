@@ -2,7 +2,7 @@
 
 <%-- Show the header with the shopping cart image --%>
 <table border="0">
-<tr><td><img src="cart4.png"><td><h1>Shopping Cart</h1>
+<tr><td><img src=""><td><h1>Shopping Cart</h1>
 </table>
 
 <%

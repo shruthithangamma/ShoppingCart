@@ -6,7 +6,7 @@
 <p>
 <h1>Please enter your shipping information</h1>
 <p>
-<form action="/shoppingcart/CheckoutServlet" method="post">
+<form action="/ShoppingCart/CheckoutServlet" method="post">
 
 <table>
 <tr><td>Name:</td><td><input type="text" name="name"></td></tr>

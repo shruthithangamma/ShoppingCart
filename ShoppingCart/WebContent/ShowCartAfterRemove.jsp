@@ -1,5 +1,5 @@
-<%@ page language="java"  contentType="text/html; charset=ISO-8859-1" import="data.*,java.util.*,java.text.*" %>
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java"  contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" import="data.*,java.util.*,java.text.*" %>
+   
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
- <a href="/ShoppingCart/ShowProductCatalog.jsp">Continue Shopping</a> 
+ <a href="/ShoppingCart/ShowProductCatalog.jsp">Continue Shopping</a><br>
+  <a href="/ShoppingCart/Checkout.jsp"> Confirm </a>  
 <table border=4>
 <tr><th>Description</th><th>Quantity</th><th>Price</th></tr>
 <%
@@ -31,16 +32,17 @@ ShoppingCart cart = (ShoppingCart) session.getAttribute("ShoppingCart");
                 out.print(item.orderQuantity);
                 out.print("</td><td>");
                 out.print(currency.format(item.price));
-                
+                out.println("</td></ br><td><a href=\"/ShoppingCart/RemoveItemServlet?item="+
+                        i+"\">Remove</a></td></tr>");
         	}
-        	else
+        	else{
         		out.print("Shopping cart is empty");
-          
-        	 out.println("<a href=\"/ShoppingCart/RemoveItemServlet?item="+
-                     i+"\">Remove</a></ br>");
+        	}
         	 
-        	 out.println("<a href=\"/ShoppingCart/CheckoutServlet?cart="+
-                     i+"\">Confirm</a>");
+        	 
+        	 /* out.println("</td><td>"+
+                     "<a href=\"/ShoppingCart/CheckoutServlet?cart="+
+                     i+"\">Confirm</a></td></tr>");*/
 
         }
     

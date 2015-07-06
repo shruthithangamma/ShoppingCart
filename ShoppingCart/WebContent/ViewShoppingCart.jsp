@@ -1,9 +1,11 @@
 <%@ page language="java" import="data.*,java.util.*,java.text.*" %>
 
 <%-- Show the header with the shopping cart image --%>
-<body><a href="/ShoppingCart/ShowProductCatalog.jsp">continue shopping</a></body>
+<body><a href="/ShoppingCart/ShowProductCatalog.jsp">continue shopping</a><br>
+<a href="/ShoppingCart/Checkout.jsp"> Confirm </a>
+</body>
 <table border="0">
-<tr><td><img src="cart4.png"><td><h1>Shopping Cart</h1>
+<tr><td><img src=""><td><h1>Selected Items</h1>
 </table>
 
 <%
@@ -53,11 +55,13 @@
             out.print(currency.format(item.price));
 
 // Print out a link that allows the user to delete an item from the cart.
-            out.println("</td><td>"+
-                "<a href=\"/ShoppingCart/CheckoutServlet?cart="+
-                i+"\">Confirm</a></td></tr>");
-          
+           
+            out.println("</td></ br><td><a href=\"/ShoppingCart/RemoveItemServlet?item="+
+                    i+"\">Remove</a></td></tr>");
+       	 
+       	
         }
+       
     }
 %>
 </table>
